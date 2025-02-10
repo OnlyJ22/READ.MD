@@ -1,3 +1,4 @@
+
 <field name="XMLTZone">
     <![CDATA[
         <timeZoneRule>
@@ -15,15 +16,35 @@
     ]]>
 </field>
 
-- Event.ts line 88
+Event.ts line 88
+
     public XMLTZone: string = '';  // Add this line
 
     constructor(author?: User, editor?: User, created?: Moment, modified?: Moment, id?: number, uniqueId?: Guid, etag?: number) {
         super(author, editor, created, modified, id, uniqueId, etag);
 
         this.XMLTZone = ''; // Initialize XMLTZone field
+onlineEventServies line 85 
 
-  - onlineEventServices line 403
+public track(event: Event): void;
+public track(refiner: Refiner): void;
+public track(refinerValue: RefinerValue): void;
+public track(approvers: Approvers): void;
+public track(entity: Event | Refiner | RefinerValue | Approvers): void {
+    if (entity instanceof Event) {
+        entity.XMLTZone = entity.XMLTZone || '';  // Ensure XMLTZone is set before persisting
+        this._eventLoader.track(entity);
+    } else if (entity instanceof Refiner) {
+        this._refinerLoader.track(entity);
+        entity.values.forEach(value => this.track(value));
+    } else if (entity instanceof RefinerValue) {
+        this._refinerValueLoader.track(entity);
+    } else if (entity instanceof Approvers) {
+        this._approversLoader.track(entity);
+    }
+}
+
+onlineEventServices line 403
 
  createSampleEvents: async () => {
                 console.log(`Starting 'createSampleEvents()'`);
@@ -69,3 +90,4 @@
 
                     events.push(event);
                     this.track(event);
+                    
