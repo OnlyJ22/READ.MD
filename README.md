@@ -1,29 +1,71 @@
-# Notes
-RecurrenceData
-        const repeatInstances = repeatInstancesNode && parseInt(repeatInstancesNode.textContent);
-        const repeatForever = !!repeatForeverNode;
-        //const windowEnd = windowEndNode && moment(windowEndNode.textContent);
-        const windowEnd = windowEndNode && moment.tz(windowEndNode.textContent, "America/New_York");
-        const { until } = recurrence;
-        if (repeatForever) {
-            until.type = RecurUntilType.forever;
-        } else if (repeatInstances) {
-            until.type = RecurUntilType.count;
-            until.count = repeatInstances;
-        } else if (windowEnd) {
-            until.type = RecurUntilType.date;
-            // until.date = windowEnd.clone();
-            until.date = windowEnd ? windowEnd.format('YYYY-MM-DDTHH:mm:ssZ') : null;
-        }
-OR for local time 
-const windowEnd = windowEndNode && moment.tz(windowEndNode.textContent, moment.tz.guess());
-EventOccurence
-        constructor(
-            public readonly event: Event,
-            public readonly start: Moment = moment.tz(event.start, "America/New_York"),
-            public readonly end: Moment = moment.tz(event.end, "America/New_York")
-        ) { }
+<field name="XMLTZone">
+    <![CDATA[
+        <timeZoneRule>
+            <standardBias>480</standardBias>
+            <additionalDaylightBias>-60</additionalDaylightBias>
+            <standardDate>
+                <transitionRule month="11" day="su" weekdayOfMonth="first"/>
+                <transitionTime>02:00:00</transitionTime>
+            </standardDate>
+            <daylightDate>
+                <transitionRule month="3" day="su" weekdayOfMonth="second"/>
+                <transitionTime>02:00:00</transitionTime>
+            </daylightDate>
+        </timeZoneRule>
+    ]]>
+</field>
 
-OR for local time
-public readonly start: Moment = moment.tz(event.start, moment.tz.guess()),
-public readonly end: Moment = moment.tz(event.end, moment.tz.guess())
+- Event.ts line 88
+    public XMLTZone: string = '';  // Add this line
+
+    constructor(author?: User, editor?: User, created?: Moment, modified?: Moment, id?: number, uniqueId?: Guid, etag?: number) {
+        super(author, editor, created, modified, id, uniqueId, etag);
+
+        this.XMLTZone = ''; // Initialize XMLTZone field
+
+  - onlineEventServices line 403
+
+ createSampleEvents: async () => {
+                console.log(`Starting 'createSampleEvents()'`);
+
+                const refiners = await this._refinerLoader.all();
+
+                const { currentUser } = this._directory;
+
+                const events: Event[] = [];
+
+                const timeZoneXML = `<![CDATA[
+                    <timeZoneRule>
+                        <standardBias>480</standardBias>
+                        <additionalDaylightBias>-60</additionalDaylightBias>
+                        <standardDate>
+                            <transitionRule month="11" day="su" weekdayOfMonth="first"/>
+                            <transitionTime>02:00:00</transitionTime>
+                        </standardDate>
+                        <daylightDate>
+                            <transitionRule month="3" day="su" weekdayOfMonth="second"/>
+                            <transitionTime>02:00:00</transitionTime>
+                        </daylightDate>
+                    </timeZoneRule>
+                ]]>`;
+
+                {
+                    const event = new Event();
+                    event.snapshot();
+                    event.title = "North America East Quarterly Connect - Broadcast";
+                    event.start = now().add(2, 'days').startOf('day').add(10, 'hours');
+                    event.end = event.start.clone().add(2, 'hours');
+                    event.location = "Online Teams Meeting";
+
+                    for (const refiner of refiners)
+                        event.refinerValues.add(refiner.values.get()[0]);
+
+                    event.moderator = currentUser;
+                    event.moderationTimestamp = now();
+                    event.moderationStatus = EventModerationStatus.Approved;
+
+                    // ADDING XMLTZone FIELD
+                    event.XMLTZone = timeZoneXML; 
+
+                    events.push(event);
+                    this.track(event);
