@@ -1,3 +1,5 @@
+sample pc build 
+https://pcpartpicker.com/list/cNLjRV
 
 <field name="XMLTZone">
     <![CDATA[
