@@ -1,3 +1,5 @@
+https://learn.microsoft.com/en-us/training/courses/az-140t00
+
 https://algomap.io
 
 sample pc build 
