@@ -1,3 +1,5 @@
+https://www.freecodecamp.org/news/how-hackers-exploit-web-applications-and-how-to-prevent-them/
+
 https://my-food-ranking.netlify.app/
 
 https://www.thecsharpacademy.com
