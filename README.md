@@ -322,4 +322,83 @@ WHERE <VALUE> > ALL / ANY <ANOTHER SELECT QUERY>;
 - `MIN` – Returns the minimum value in a column
 - `MAX` – Returns the maximum value in a column
 - `AVG` – Returns the average of a group of selected values
+
+# Veterans and Transitioning Service Members
+
+## ACT NOW EDUCATION
+- Certifications: CSM, PSM, SHRM CP, SEC+, NET+, CLOUD+, CYSA+, CASP+, PMP, Splunk Core Certified User, Splunk Core Certified Power User, Splunk Certified Cybersecurity Defense Analyst, Google IT Support, Google Cybersecurity, Google Data Analytics, Google Project Management, Google Business Intelligence, IBM Data Science Professional, IBM Cybersecurity Analyst
+- Website: [https://actnoweducation.org/programs](https://actnoweducation.org/programs)
+
+## INSTITUTE FOR VETERANS AND MILITARY FAMILIES (IVMF) - ONWARD TO OPPORTUNITY
+- Certifications: AWS Cloud, A+, LINUX+, SEC+, CASP+, SSCP, CISSP, NSE 1-8, NET+, CLOUD+, SERVER+, JSE, SE8, CCNA, ITIL, PMP, CAPM, Six Sigma Green Belt, PHR, aPHR, SPHR, PCEP, PCAP, NDG Linux
+- Website: [https://ivmf.syracuse.edu/programs/career-training/learning-pathways/](https://ivmf.syracuse.edu/programs/career-training/learning-pathways/)
+
+## VETSINTECH
+- Certifications: AWS Security, AWS Certified Cloud Practitioner, AWS Solutions Architect, SEC+, FullStack, Intro to Python, A+, NET+, CYSA+, PMP
+- Website: [https://vetsintech.co/military/vit-academy](https://vetsintech.co/military/vit-academy)
+
+## PER SCHOLAS
+- Certifications: A+, Google IT Support, CYSA+, AWS Certified Cloud Practitioner, Sales Force Administrator Certification
+- Website: [https://perscholas.org/veterans/](https://perscholas.org/veterans/)
+
+## NPOWER
+- Certifications: ITIL, A+, SEC+, AWS Cloud, AWS Solutions Architect Associate, Google IT Support Certificate
+- Website: [https://www.npower.org](https://www.npower.org)
+
+## SERVICENOW
+- Programs: Early Careers NextGen, System Administration
+- Website: [https://learning.servicenow.com/skillbridge](https://learning.servicenow.com/skillbridge)
+
+## PURDUE UNIVERSITY NORTHWEST
+- Certifications: A+, SEC+, CEH, CHFI, Linux, CyberOps
+- Website: [https://www.pnw.edu/cybersecurity/cwct/](https://www.pnw.edu/cybersecurity/cwct/)
+
+## BOOTS TO BOOKS
+- Benefit: Any certification up to $1000
+- Website: [https://boots2books.com/tPath.html](https://boots2books.com/tPath.html)
+
+## SANS CYBER WORKFORCE ACADEMY
+- Certifications: GFACT, GSEC, GCIH
+- Website: [https://www.sans.org/cyber-academy/](https://www.sans.org/cyber-academy/)
+
+## CLOUD VETERANS
+- Certifications: 
+  - Google Cloud: GCP ACE, GCP PCA
+  - Microsoft Azure: AZ-900, AZ-104, AZ-305
+  - Microsoft 365: MS-900, MS-102
+  - AWS: CLF-C01, SAA-C03
+  - SAP: SAP-C01
+- Website: [https://www.cloudveterans.org/bootcamps](https://www.cloudveterans.org/bootcamps)
+
+## MEDCERTS
+- Certifications: ITF+, A+, NET+, CLOUD+, CYSA+
+- Website: [https://medcerts.com/military-benefits](https://medcerts.com/military-benefits)
+
+## MYCAA
+- Benefit: Any certification up to $4000
+- Website: [https://mycaa.militaryonesource.mil/mycaa/](https://mycaa.militaryonesource.mil/mycaa/)
+
+---
+
+# Military Spouses
+
+## ACT NOW EDUCATION
+- Same as listed under Veterans and Transitioning Service Members
+- Website: [https://actnoweducation.org/programs](https://actnoweducation.org/programs)
+
+## INSTITUTE FOR VETERANS AND MILITARY FAMILIES (IVMF)
+- Same as above
+- Website: [https://ivmf.syracuse.edu/programs/career-training/learning-pathways/](https://ivmf.syracuse.edu/programs/career-training/learning-pathways/)
+
+## VETSINTECH
+- Same as above
+- Website: [https://vetsintech.co/military/vit-academy](https://vetsintech.co/military/vit-academy)
+
+## PER SCHOLAS
+- Same as above
+- Website: [https://perscholas.org/veterans/](https://perscholas.org/veterans/)
+
+## NPOWER
+- Same as above
+- Website: [https://www.npower.org](https://www.npower.org)
                     
